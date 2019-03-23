@@ -1,6 +1,6 @@
 # JBehave java adapter for JIRA
 
-JBehave java adapter (further - adapter) gathers scenarios execution results and than generates `jira-tm-report.xml` file which is used by [Test Management Plugin](https://github.com/at-lab-development/jenkins-test-management-plugin).
+JBehave java adapter (further - adapter) gathers scenarios execution results and then generates `jira-tm-report.xml` file which is used by [Test Management Plugin](https://github.com/at-lab-development/jenkins-test-management-plugin).
 
 Adapter gathers the following scenario execution results:
 - status (passed or failed);
@@ -33,7 +33,7 @@ Add repository in `pom.xml` file:
 ....
 </repositories>
 ```
-And than add dependency:
+And then add dependency:
 ```xml
 <dependencies>
     <dependency>
@@ -86,7 +86,7 @@ public void afterScenarioHook() {
   JIRAReporter.collectData();
 }
 ```
-Than in steps you can invoke methods `JIRAReporter.addParameter()` and/or `JIRAReporter.addAttachment()`.
+Then in steps you can invoke methods `JIRAReporter.addParameter()` and/or `JIRAReporter.addAttachment()`.
 ```java
     @Then("I should see '$text' in list video")
     public void IShouldSeeTitleInListVideo(String expectedVideoTitle) {
